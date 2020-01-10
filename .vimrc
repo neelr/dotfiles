@@ -12,3 +12,4 @@ if filereadable(expand("~/.vimrc.plug"))
 inoremap  "  ""<Left>
 inoremap  '  ''<Left>
 inoremap [<CR> [<CR>]<C-o>O
+set mouse=a
