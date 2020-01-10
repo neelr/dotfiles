@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'hack nerd font',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -146,7 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-        plugins: ["hyper-search", "hyper-pane", "hyper-night-owl"],
+        plugins: ["hyper-search", "hyper-pane", "hyper-night-owl", "hyper-material-theme"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
