@@ -1,1 +1,7 @@
-/Users/neelredkar/Library/Application Support/Code/User/keybindings.json
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+cmd+c",
+        "command": "extension.macColorPicker"
+    }
+]

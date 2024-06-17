@@ -1,1 +1,71 @@
-/Users/neelredkar/Library/Application Support/Code/User/settings.json
+{
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "GitHub Dark",
+  "material-icon-theme.showWelcomeMessage": false,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sync.gist": "9152d57dcfcf3347f16035618cc3cea8",
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.kernelProviderAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "kernelProvider": "ms-toolsai.jupyter"
+    }
+  ],
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "notebook.lineNumbers": "on",
+  "r.bracketedPaste": true,
+  "r.rterm.mac": "/usr/local/bin/radian",
+  "liveshare.notebooks.allowGuestExecuteCells": true,
+  "vscode-pets.theme": "forest",
+  "vscode-pets.position": "explorer",
+  "vscode-pets.petType": "crab",
+  "editor.inlineSuggest.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false,
+    "haskell": true,
+    "javascript": true,
+    "cpp": true
+  },
+  "notebook.output.textLineLimit": 999,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "haskell.manageHLS": "GHCup",
+  "github.copilot.editor.enableAutoCompletions": true
+}
