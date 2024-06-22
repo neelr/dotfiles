@@ -1,7 +1,32 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "shift+cmd+c",
-        "command": "extension.macColorPicker"
-    }
+  {
+    "key": "shift+cmd+c",
+    "command": "extension.macColorPicker"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "-workbench.view.extension.azure"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "-notification.acceptPrimaryAction",
+    "when": "notificationFocus || notificationToastsVisible"
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.activityBarLocation.hide"
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.activityBarLocation.default"
+  },
+  {
+    "key": "cmd+8",
+    "command": "-workbench.action.focusEighthEditorGroup"
+  },
+  {
+    "key": "cmd+7",
+    "command": "-workbench.action.focusSeventhEditorGroup"
+  }
 ]

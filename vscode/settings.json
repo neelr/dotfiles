@@ -67,5 +67,7 @@
     "editor.defaultFormatter": "ms-python.autopep8"
   },
   "haskell.manageHLS": "GHCup",
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.customTitleBarVisibility": "windowed"
 }
