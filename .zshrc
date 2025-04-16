@@ -29,16 +29,6 @@ RPROMPT="[%D{%m/%f/%y} | %D{%L:%M:%S}]"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
-alias ls='ls -G'
-alias ll="ls -al"
-alias sloc="git ls-files \"*.go*\" \"*.js*\" | xargs wc -l"
-alias restart-wifi='sudo ifconfig en0 down && sudo ifconfig en0 up'
-alias webvalley='ssh -L 8888:localhost:8888 -p 5012 wvuser@lab-05e14aa7-8738-4831-aeb4-ba711d97c567.eastus.cloudapp.azure.com'
-alias vf='cfiles'
-alias frappox="~/Documents/Git/frappox/target/release/frappox"
-alias pdfjoin="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/MacOS/join"
-
 # Functions
 ntfs () {
     sudo /usr/local/bin/ntfs-3g /dev/$1 /Volumes/NTFS -olocal -oallow_other
@@ -72,12 +62,36 @@ llm () {
       -n $3 \
       -p $1
 }
+sbash() {
+    # First connection: create a temporary script on the remote server
+    ssh "${@:1}" "cat > /tmp/sbashrc_temp" < ~/s.bashrc
+    
+    # Second connection: source the script and start an interactive shell
+    ssh -t -A "${@:1}" "
+    # Source the temporary script
+    source /tmp/sbashrc_temp
+    
+    # Start interactive shell with your customizations applied
+    exec \$SHELL -i
+    "
+}
+
+# Aliases
+alias ls='ls -G'
+alias ll="ls -al"
+alias sloc="git ls-files \"*.go*\" \"*.js*\" | xargs wc -l"
+alias restart-wifi='sudo ifconfig en0 down && sudo ifconfig en0 up'
+alias webvalley='ssh -L 8888:localhost:8888 -p 5012 wvuser@lab-05e14aa7-8738-4831-aeb4-ba711d97c567.eastus.cloudapp.azure.com'
+alias vf='cfiles'
+alias frappox="~/Documents/Git/frappox/target/release/frappox"
+alias pdfjoin="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/MacOS/join"
+alias s=sbash
 
 # Environment Configuration
 export GPG_TTY=$(tty)
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Conda Initialization
 # >>> conda initialize >>>
@@ -114,3 +128,14 @@ TRAPALRM() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/neelredkar/.opam/opam-init/init.zsh' ]] || source '/Users/neelredkar/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+source ~/s.bashrc
